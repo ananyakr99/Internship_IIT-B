@@ -1,0 +1,10 @@
+#Page 118
+library("sets")
+both_heads<-c('hh')
+both_tails<-c('tt')
+head_and_tail<-c('ht')
+tail_and_head<-c('th')
+Sample_space<-as.set(c('hh','tt','ht','th'))
+Probablity_of_both_heads<-print(length(both_heads)/length(Sample_space))
+Probability_of_both_tails<-print(length(both_tails)/length(Sample_space))
+Overall_Probability<-print(Probablity_of_both_heads+Probability_of_both_tails)

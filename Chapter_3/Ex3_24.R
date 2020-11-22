@@ -1,0 +1,23 @@
+#Page 161
+m_e<-43
+m_w<-293
+m_h<-114
+m_total<-(m_e+m_w+m_h)
+f_e<-82
+f_w<-299
+f_h<-71
+f_total<-(f_e+f_w+f_h)
+total_e<-(m_e+f_e)
+total_w<-(m_w+f_w)
+total_h<-(m_h+f_h)
+grand_total<-(m_total+f_total)
+given_data<-matrix(c(m_e,m_w,m_h,m_total,f_e,f_w,f_h,f_total,total_e,total_w,total_h,grand_total),ncol=4,byrow=TRUE)
+colnames(given_data)<-c("E","W","H","Total")
+rownames(given_data)<-c("M","F","Total")
+given_data<-as.table(given_data)
+print(given_data)
+P_F<-f_total/grand_total
+P_E<-total_e/grand_total
+P_intersection<-print(f_e/grand_total)
+product<-print(P_F*P_E)
+print(product==P_intersection)

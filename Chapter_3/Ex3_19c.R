@@ -1,0 +1,20 @@
+#Page 141
+c_s<-12
+c_t<-1
+c_total<-c_s+c_t
+e_s<-4
+e_t<-3
+e_total<-e_s+e_t
+m_s<-6
+m_t<-2
+m_total<-m_s+m_t
+total_s<-c_s+e_s+m_s
+total_t<-c_t+e_t+m_t
+grand_total<-c_total+e_total+m_total
+given_data<-matrix(c(c_s,c_t,c_total,e_s,e_t,e_total,m_s,m_t,m_total,total_s,total_t,grand_total),ncol=3,byrow=TRUE)
+colnames(given_data)<-c("S","T","Total")
+rownames(given_data)<-c("C","E","M","Total")
+given_data<-as.table(given_data)
+print(given_data)
+probability_of_m<-print(m_total/grand_total)
+reqd_probability<-print(1-probability_of_m)

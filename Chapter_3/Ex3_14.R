@@ -1,0 +1,10 @@
+#Page 135
+library("sets")
+library("gtools")
+set<-as.set(c(1,2,3,4,5,6))
+e<-c(2,4,6)
+E<-as.set(e)
+k<-set_complement(E,set)
+possible_set_1<-print(combinations(n=3,r=3,v=c(1,3,5),repeats.allowed=F))
+possible_set_2<-print(combinations(n=3,r=2,v=c(1,3,5),repeats.allowed=F))
+possible_set_3<-print(combinations(n=3,r=1,v=c(1,3,5),repeats.allowed=F))

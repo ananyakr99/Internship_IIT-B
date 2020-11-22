@@ -1,0 +1,11 @@
+#Page 160
+library("sets")
+sample_space<-c(1,2,3,4,5,6)
+event_A<-c(3)
+event_B<-c(1,3,5)
+intersection<-intersect(event_A,event_B)
+P_A<-length(event_A)/length(sample_space)
+P_B<-length(event_B)/length(sample_space)
+P_Intersection<-print(length(intersection)/length(sample_space))
+product<-print(P_A*P_B)
+print(product==P_Intersection)
