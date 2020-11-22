@@ -1,0 +1,10 @@
+#Page 186
+library("sets")
+sample_space<-c('hh','ht','th','tt')
+Event_zero_heads<-as.set(c('tt'))
+Event_one_head<-as.set(c('ht','th'))
+Event_two_heads<-as.set(c('hh'))
+x<-c(0,1,2)
+Prob<-c((length(Event_zero_heads)/length(sample_space)),(length(Event_one_head)/length(sample_space)),(length(Event_two_heads)/length(sample_space)))
+prob.dist<-cbind(x,Prob)
+print(prob.dist)
